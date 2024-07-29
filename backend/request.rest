@@ -1,6 +1,8 @@
 ###
 GET http://localhost:5000/api/rooms/
 
+
+#create room
 ###
 POST http://localhost:5000/api/rooms
 Content-Type: application/json
@@ -72,3 +74,40 @@ Content-Type: application/json
 #delete booking
 ###
 DELETE http://localhost:5000/api/bookings/66a65fd8baafb963f72458a5
+
+
+#login
+#get users
+###
+GET http://localhost:5000/api/users
+
+#create user
+###
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Subudhi",
+    "email": "sangramsubudhi19@gmail.com",
+    "password": "admin"
+}
+
+#login
+###
+POST http://localhost:5000/api/users/login
+Content-Type: application/json
+
+{
+    "email": "sangramsubudhi19@gmail.com",
+    "password": "admin"
+
+}
+
+#logout
+###
+http://localhost:5000/api/users/logout
+
+#check
+###
+GET http://localhost:5000/auth
+
