@@ -19,7 +19,7 @@ const Register = () => {
   useEffect(() => {
     if(isSuccess){
       navigate("/login");
-      dispatch(reset());
+      dispatch(reset);
     }
 
 
